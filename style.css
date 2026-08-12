@@ -1,0 +1,1412 @@
+/* =========================================================
+   IILM UNIVERSITY LANDING PAGE
+   STYLE.CSS
+========================================================= */
+
+
+/* =========================================================
+   1. GLOBAL STYLES
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+section {
+    width: 100%;
+}
+
+.section-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   2. COLORS
+========================================================= */
+
+:root {
+    --navy: #172f5f;
+    --dark-navy: #102348;
+    --maroon: #941d32;
+    --dark-maroon: #761628;
+    --gold: #e6c34d;
+    --white: #ffffff;
+    --black: #111111;
+    --light-gray: #f5f5f5;
+    --gray: #666666;
+    --border: #e5e5e5;
+}
+
+
+/* =========================================================
+   3. TOP UTILITY BAR
+========================================================= */
+
+.top-bar {
+    background-color: var(--navy);
+    color: var(--white);
+    padding: 10px 0;
+}
+
+.top-bar-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+.top-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.top-links a {
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.top-links a:hover {
+    color: var(--gold);
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--maroon);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   4. MAIN NAVIGATION
+========================================================= */
+
+.main-header {
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+
+    z-index: 10;
+
+    background: rgba(10, 20, 35, 0.55);
+    backdrop-filter: blur(4px);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+
+/* Logo */
+
+.logo {
+    margin-right: auto;
+}
+
+.logo a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-main {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: var(--white);
+}
+
+.logo-subtitle {
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: var(--white);
+}
+
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    color: var(--white);
+
+    font-size: 13px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--gold);
+}
+
+.nav-menu span {
+    margin-left: 4px;
+    font-size: 14px;
+}
+
+
+/* Apply Button */
+
+.apply-button {
+    background-color: var(--maroon);
+    color: var(--white);
+
+    padding: 15px 28px;
+
+    font-weight: bold;
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: var(--gold);
+    color: var(--black);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   5. HERO SECTION
+========================================================= */
+
+.hero {
+    min-height: 820px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    /*
+       Temporary background image.
+       Later we can replace this with your own
+       IILM/campus image.
+    */
+
+    background-image:
+        url("https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=2000&q=80");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: var(--white);
+}
+
+
+/* Dark overlay */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.65)
+        );
+}
+
+
+/* Hero content */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 90%;
+    max-width: 900px;
+
+    margin-top: 80px;
+}
+
+.hero-small-text {
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+    color: var(--gold);
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(42px, 6vw, 76px);
+
+    line-height: 1.1;
+
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    font-size: 20px;
+    font-weight: 500;
+
+    margin-bottom: 8px;
+}
+
+.hero-location {
+    font-size: 17px;
+    font-weight: bold;
+
+    margin-top: 20px;
+}
+
+
+/* Hero buttons */
+
+.hero-buttons {
+    margin-top: 35px;
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+/* =========================================================
+   6. BUTTONS
+========================================================= */
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.primary-button {
+    background-color: var(--maroon);
+    color: var(--white);
+}
+
+.primary-button:hover {
+    background-color: var(--gold);
+    color: var(--black);
+
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.secondary-button:hover {
+    background-color: var(--white);
+    color: var(--navy);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   7. ANNOUNCEMENT BAR
+========================================================= */
+
+.announcement {
+    background-color: var(--maroon);
+    color: var(--white);
+
+    padding: 16px 20px;
+
+    text-align: center;
+}
+
+.announcement p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.announcement strong {
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   8. SECTION HEADINGS
+========================================================= */
+
+.section-heading {
+    max-width: 750px;
+    margin-bottom: 60px;
+}
+
+.section-heading.centered {
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.section-label {
+    color: var(--maroon);
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.section-heading h2,
+.why-iilm-content h2,
+.global-content h2,
+.cta-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: var(--navy);
+
+    font-size: clamp(36px, 5vw, 56px);
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+.section-description {
+    color: var(--gray);
+
+    max-width: 650px;
+    margin: auto;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   9. ABOUT SECTION
+========================================================= */
+
+.about-section {
+    padding: 110px 0;
+
+    background-color: var(--white);
+}
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+.about-text p {
+    color: var(--gray);
+
+    font-size: 17px;
+
+    margin-bottom: 20px;
+}
+
+.text-button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: var(--maroon);
+
+    font-weight: bold;
+
+    border-bottom: 2px solid var(--maroon);
+
+    padding-bottom: 5px;
+
+    transition: 0.3s ease;
+}
+
+.text-button:hover {
+    color: var(--navy);
+    border-color: var(--navy);
+}
+
+
+/* About statistics */
+
+.about-stats {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.stat-card {
+    padding: 30px;
+
+    background-color: var(--light-gray);
+
+    border-left: 4px solid var(--maroon);
+
+    transition: 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 40px;
+
+    color: var(--navy);
+
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   10. PROGRAMS SECTION
+========================================================= */
+
+.programs-section {
+    padding: 110px 0;
+
+    background-color: #f7f7f7;
+}
+
+.program-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.program-card {
+    background-color: var(--white);
+
+    padding: 35px 30px;
+
+    min-height: 360px;
+
+    border-top: 4px solid var(--maroon);
+
+    transition: 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.program-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.program-number {
+    color: var(--maroon);
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 30px;
+}
+
+.program-card h3 {
+    color: var(--navy);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.program-card p {
+    color: var(--gray);
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+}
+
+.program-card a {
+    margin-top: auto;
+
+    color: var(--maroon);
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.program-card a:hover {
+    color: var(--navy);
+}
+
+
+/* =========================================================
+   11. WHY IILM SECTION
+========================================================= */
+
+.why-iilm-section {
+    padding: 110px 0;
+
+    background-color: var(--white);
+}
+
+.why-iilm-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* Image placeholder */
+
+.why-iilm-image {
+    min-height: 600px;
+}
+
+.image-placeholder {
+    height: 100%;
+
+    min-height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--maroon)
+        );
+
+    color: var(--white);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 30px;
+
+    letter-spacing: 3px;
+}
+
+
+/* Why IILM text */
+
+.why-iilm-content > p:not(.section-label) {
+    color: var(--gray);
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+}
+
+
+/* Features */
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.feature {
+    display: flex;
+
+    gap: 20px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.feature-icon {
+    min-width: 45px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--maroon);
+
+    color: var(--white);
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.feature h3 {
+    color: var(--navy);
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+.feature p {
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   12. CAMPUS SECTION
+========================================================= */
+
+.campus-section {
+    padding: 110px 0;
+
+    background-color: #f7f7f7;
+}
+
+.campus-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 20px;
+}
+
+.campus-card {
+    background-color: var(--white);
+
+    transition: 0.3s ease;
+}
+
+.campus-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.campus-image {
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #243b6b,
+            #8e2035
+        );
+
+    color: var(--white);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+}
+
+.large-card .campus-image {
+    height: 380px;
+}
+
+.campus-content {
+    padding: 25px;
+}
+
+.campus-content h3 {
+    color: var(--navy);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+.campus-content p {
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   13. GLOBAL CONNECT
+========================================================= */
+
+.global-section {
+    min-height: 550px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(15, 35, 70, 0.93),
+            rgba(15, 35, 70, 0.93)
+        );
+
+    color: var(--white);
+}
+
+.global-content {
+    max-width: 750px;
+}
+
+.global-content .section-label {
+    color: var(--gold);
+}
+
+.global-content h2 {
+    color: var(--white);
+}
+
+.global-content > p:not(.section-label) {
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+.global-content .primary-button {
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   14. PLACEMENT SECTION
+========================================================= */
+
+.placement-section {
+    padding: 110px 0;
+
+    background-color: var(--white);
+}
+
+.placement-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.placement-card {
+    padding: 40px 30px;
+
+    background-color: #f7f7f7;
+
+    border-bottom: 4px solid var(--maroon);
+
+    transition: 0.3s ease;
+}
+
+.placement-card:hover {
+    transform: translateY(-6px);
+
+    background-color: var(--navy);
+}
+
+.placement-card:hover h3,
+.placement-card:hover p {
+    color: var(--white);
+}
+
+.placement-card h3 {
+    color: var(--navy);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+
+    transition: 0.3s ease;
+}
+
+.placement-card p {
+    color: var(--gray);
+
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   15. FINAL CTA
+========================================================= */
+
+.cta-section {
+    padding: 120px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--maroon),
+            var(--dark-maroon)
+        );
+
+    color: var(--white);
+
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.cta-content .section-label {
+    color: var(--gold);
+}
+
+.cta-content h2 {
+    color: var(--white);
+}
+
+.cta-content > p:not(.section-label) {
+    max-width: 600px;
+
+    margin: 0 auto 30px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 17px;
+}
+
+.cta-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   16. FOOTER
+========================================================= */
+
+.footer {
+    background-color: #101d36;
+
+    color: var(--white);
+
+    padding-top: 70px;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 60px;
+
+    padding-bottom: 60px;
+}
+
+
+/* Footer brand */
+
+.footer-logo {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 42px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 14px;
+
+    max-width: 300px;
+
+    margin-bottom: 8px;
+}
+
+
+/* Footer columns */
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-column h3 {
+    color: var(--gold);
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--white);
+
+    padding-left: 5px;
+}
+
+
+/* Footer bottom */
+
+.footer-bottom {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 25px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.5);
+
+    font-size: 13px;
+}
+
+.footer-bottom div {
+    display: flex;
+
+    gap: 20px;
+}
+
+.footer-bottom a {
+    color: rgba(255, 255, 255, 0.5);
+
+    font-size: 13px;
+}
+
+.footer-bottom a:hover {
+    color: var(--white);
+}
+
+
+/* =========================================================
+   17. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 11px;
+    }
+
+    .nav-container {
+        gap: 20px;
+    }
+
+    .logo-main {
+        font-size: 34px;
+    }
+
+    .program-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .campus-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .large-card {
+        grid-column: span 2;
+    }
+
+    .footer-container {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   18. MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Top bar */
+
+    .top-bar-container {
+        justify-content: center;
+    }
+
+    .top-links {
+        display: none;
+    }
+
+    /* Navigation */
+
+    .main-header {
+        top: 48px;
+    }
+
+    .nav-container {
+        min-height: 75px;
+
+        justify-content: space-between;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+    .logo-main {
+        font-size: 32px;
+    }
+
+    .logo-subtitle {
+        font-size: 8px;
+    }
+
+    .apply-button {
+        padding: 12px 18px;
+
+        font-size: 12px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 700px;
+
+        background-attachment: scroll;
+    }
+
+    .hero-content {
+        margin-top: 80px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-location {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .hero-buttons a {
+        width: 220px;
+    }
+
+
+    /* Announcement */
+
+    .announcement p {
+        font-size: 14px;
+    }
+
+
+    /* About */
+
+    .about-section,
+    .programs-section,
+    .why-iilm-section,
+    .campus-section,
+    .placement-section {
+        padding: 80px 0;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    /* Programs */
+
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Why IILM */
+
+    .why-iilm-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .why-iilm-image {
+        min-height: 400px;
+    }
+
+    .image-placeholder {
+        min-height: 400px;
+    }
+
+
+    /* Campus */
+
+    .campus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .large-card {
+        grid-column: auto;
+    }
+
+    .large-card .campus-image,
+    .campus-image {
+        height: 300px;
+    }
+
+
+    /* Global */
+
+    .global-section {
+        min-height: 500px;
+    }
+
+
+    /* Placements */
+
+    .placement-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CTA */
+
+    .cta-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .cta-buttons a {
+        width: 220px;
+    }
+
+
+    /* Footer */
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   19. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .section-container {
+        width: 88%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-small-text {
+        font-size: 11px;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2,
+    .why-iilm-content h2,
+    .global-content h2,
+    .cta-content h2 {
+        font-size: 36px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom div {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
